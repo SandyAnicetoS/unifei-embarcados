@@ -20,7 +20,7 @@ void pretas(unsigned char coluna){
         0x03, 0x03, 0x03, 0x03, 0x03, 0x07, 0x0F, 0x1F, //1,2
         0x18, 0x18, 0x18, 0x18, 0x18, 0x1C, 0x1E, 0x1F //1,3
     };
-    lcd_cmd(0x40); //Configura para a primeira posição de memória
+    lcd_cmd(0x40); //Configura para a primeira posiÃ§Ã£o de memÃ³ria
     //Envia cada uma das linhas em ordem
     for (i = 0; i < 64; i++) {
         lcd_dat(black[i]);
@@ -49,7 +49,7 @@ void brancas(unsigned char coluna){
         0x02,0x02,0x02,0x02,0x02,0x04,0x08,0x1F,
         0x08,0x08,0x08,0x08,0x08,0x04,0x02,0x1F
     };
-    lcd_cmd(0x40); //Configura para a primeira posição de memória
+    lcd_cmd(0x40); //Configura para a primeira posiÃ§Ã£o de memÃ³ria
     //Envia cada uma das linhas em ordem
     for (i = 0; i < 64; i++) {
         lcd_dat(white[i]);
@@ -134,7 +134,7 @@ int main(){
             }
             if (bitTst(kpRead(), 11)){ // tecla 3 - incrementa DeSeg
                 DeSeg++;
-                if (DeSeg > 9){
+                if (DeSeg > 6){
                     DeSeg = 0;
                 }
             }
@@ -193,7 +193,7 @@ int main(){
                     if (kpRead() != tecla2){
                         tecla2 = kpRead();
                         
-                        if (bitTst(kpRead(), 3)){ // tecla 1, jogador peças brancas
+                        if (bitTst(kpRead(), 3)){ // tecla 1, jogador peÃ§as brancas
                             lcd_cmd(L_CLR);
                             lcd_cmd(L_L1);
                             lcd_str("Brancas");
@@ -204,7 +204,7 @@ int main(){
                             tempflag = 1;
                             
                         }
-                        if (bitTst(kpRead(), 7)){ // tecla 2, jogador peças pretas
+                        if (bitTst(kpRead(), 7)){ // tecla 2, jogador peÃ§as pretas
                             
                             lcd_cmd(L_CLR);
                             lcd_cmd(L_L1);
