@@ -167,6 +167,9 @@ int main(){
                             if (contP1 <= 0){
                                 flagcontrole = 1;
                             }
+                            if (contP1 / 10 % 10 == 9){
+                                contP1 -= 40;
+                            }
                             ssdDigit(((contP1 / 1000) % 10), 0);
                             ssdDigit(((contP1 / 100) % 10), 1);
                             ssdDigit(((contP1 / 10) % 10), 2);
@@ -180,6 +183,9 @@ int main(){
                             contP2--;
                             if (contP2 <= 0){
                                 flagcontrole = 2;
+                            }
+                            if (contP2 / 10 % 10 == 9){
+                                contP2 -= 40;
                             }
                             ssdDigit(((contP2 / 1000) % 10), 0);
                             ssdDigit(((contP2 / 100) % 10), 1);
