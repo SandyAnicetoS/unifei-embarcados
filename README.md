@@ -1,1 +1,1 @@
-# Projeto_Final_embarcados
+Projeto final da disciplina de sistemas embarcados.
